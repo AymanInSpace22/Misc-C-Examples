@@ -11,6 +11,9 @@ namespace ConsoleApp1
             Employee aworker = new Employee();
             Employee anotherWorker = new Employee(234);
             Employee theBoss = new Employee('A');
+            // you can pass multiplie arguments if there is an overloaded constructor that can accept them
+            // or you can create one that can
+            Employee manager = new Employee(900, 62000);
 
             // dont be confused
             // the extra number 4 in the placeholder is just there to set the position
@@ -18,6 +21,8 @@ namespace ConsoleApp1
             Console.WriteLine("{0, 4}{1, 14}", aworker.IdNumber, aworker.Salary.ToString("C"));
             Console.WriteLine("{0, 4}{1, 14}", anotherWorker.IdNumber, anotherWorker.Salary.ToString("C"));
             Console.WriteLine("{0, 4}{1, 14}", theBoss.IdNumber, theBoss.Salary.ToString("C"));
+            // then we can output it here just like all the others
+            Console.WriteLine("{0, 4}{1, 14}", manager.IdNumber, manager.Salary.ToString("C"));
         }
     }
 
